@@ -1,4 +1,4 @@
-# Library Management System – Database Design
+# Library Management System
 
 ## Project Overview
 This project presents the design and implementation of a Library Management System database using MySQL.
