@@ -1,5 +1,9 @@
 USE library_db;
-
+-- -----------------------------------------------------
+-- Sample Data for Library Management System
+-- This file contains sample records for testing
+-- and demonstration purposes only.
+-- -----------------------------------------------------
 -- Insert authors
 INSERT INTO Author (name, biography) VALUES
 ('George Orwell', 'English novelist and essayist'),
