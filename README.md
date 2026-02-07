@@ -5,87 +5,88 @@ This project presents the design and implementation of a Library Management Syst
 The system manages books, authors, library members, and borrowing operations.
 It demonstrates the complete database design workflow, starting from requirement analysis and ending with SQL implementation.
 
-# Project Objectives
-The main objectives of this project are:
+---
+
+## Project Objectives
 - Design a relational database for a library management system
 - Apply database design concepts such as ER modeling
 - Implement primary keys and foreign keys
 - Practice SQL DDL and DML commands
 - Retrieve related data using SQL JOIN queries
 
-# System Description
-The Library Management System is designed to store and manage information related to books, authors, members, and borrowing activities.
-It allows tracking which member borrowed which book, along with borrow and return dates.
-Relational constraints are used to maintain data integrity and consistency.
+---
 
-# Database Design
+## System Description
+The Library Management System stores and manages data related to books, authors, members, and borrowing activities.
+It tracks which member borrowed which book along with borrow and return dates, while maintaining data integrity using relational constraints.
 
-# Requirement Analysis
-The system requires managing the following data:
+---
+
+## Database Design
+
+### Requirement Analysis
 - Books (title, publication year, category)
 - Authors (name, biography)
 - Members (name, contact information)
 - Borrowing records (borrow date and return date)
 
-# Conceptual Design
+---
 
-# Identified Entities
+### Conceptual Design
+
+#### Entities
 - Book
 - Author
 - Member
 - Borrowing
 
-# Identified Relationships
-- An author writes one or more books (1:N)
-- A member can perform multiple borrowing operations (1:N)
-- A book can be involved in multiple borrowing records (1:N)
+#### Relationships
+- Author writes Book (1:N)
+- Member performs Borrowing (1:N)
+- Book is involved in Borrowing (1:N)
 
-# Logical Design
+---
 
-# Author
-- author_id (Primary Key)
+### Logical Design
+
+**Author**
+- author_id (PK)
 - name
 - biography
 
-# Book
-- book_id (Primary Key)
+**Book**
+- book_id (PK)
 - title
 - publish_year
 - category
-- author_id (Foreign Key)
+- author_id (FK)
 
-# Member
-- member_id (Primary Key)
+**Member**
+- member_id (PK)
 - name
 - contact_info
 
-# Borrowing
-- borrowing_id (Primary Key)
+**Borrowing**
+- borrowing_id (PK)
 - borrow_date
 - return_date
-- member_id (Foreign Key)
-- book_id (Foreign Key)
+- member_id (FK)
+- book_id (FK)
 
-# Physical Design
-The database was implemented using MySQL.
-Appropriate data types were selected for each attribute, such as:
-- INT for identifiers
-- VARCHAR for text fields
-- DATE for date values
+---
 
-Primary keys and foreign keys were used to enforce relationships between tables and ensure data integrity.
+### Physical Design
+The database was implemented using MySQL with appropriate data types (INT, VARCHAR, DATE).
+Primary and foreign keys were used to enforce relationships and ensure data integrity.
 
-# SQL Implementation
-The implementation process included the following steps:
-- Creating the database schema
-- Creating tables using `CREATE TABLE`
-- Defining primary keys and foreign keys
-- Inserting sample data using `INSERT INTO`
-- Retrieving data using `SELECT` and `JOIN` queries
+---
+
+## SQL Implementation
+SQL scripts are organized in the `sql/` directory.
+
+---
 
 ## Sample SQL Query
-The following query retrieves borrowing information along with related book, author, and member details:
-
 ```sql
 SELECT 
     m.name AS member_name,
