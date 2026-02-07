@@ -90,7 +90,7 @@ SQL scripts are organized in the `sql/` directory.
 
 The following diagram illustrates the Entity-Relationship (ER) model of the database:
 
-![ER Diagram](diagrams/ER%20Diagram.drawio.png)
+![ER Diagram](ER%20Diagram.png)
 
 ---
 
