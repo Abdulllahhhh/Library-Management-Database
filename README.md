@@ -86,6 +86,11 @@ SQL scripts are organized in the `sql/` directory.
 
 ---
 
+### ER Diagram
+![ER Diagram](diagrams/er_diagram.png)
+
+---
+
 ## Sample SQL Query
 ```sql
 SELECT 
