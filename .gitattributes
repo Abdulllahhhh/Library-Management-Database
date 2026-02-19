@@ -1,1 +1,3 @@
+# Add gitattributes to show SQL language (This file is not important)
+
 *.sql linguist-detectable=true
