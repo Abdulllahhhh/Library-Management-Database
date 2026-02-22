@@ -6,11 +6,11 @@ The system manages books, authors, library members, and borrowing operations.
 It demonstrates the complete database design workflow, starting from requirement analysis and ending with SQL implementation.
 
 ## Project Objectives
-- Design a relational database for a library management system
-- Apply database design concepts such as ER modeling
-- Implement primary keys and foreign keys
 - Practice SQL DDL and DML commands
+- Implement primary keys and foreign keys
 - Retrieve related data using SQL JOIN queries
+- Apply database design concepts such as ER modeling
+- Design a relational database for a library management system
 
 ## System Description
 The Library Management System stores and manages data related to books, authors, members, and borrowing activities.
@@ -19,9 +19,9 @@ It tracks which member borrowed which book along with borrow and return dates, w
 ## Database Design
 
 ### Requirement Analysis
-- Books (title, publication year, category)
 - Authors (name, biography)
 - Members (name, contact information)
+- Books (title, publication year, category)
 - Borrowing records (borrow date and return date)
 
 ### Conceptual Design
@@ -40,28 +40,28 @@ It tracks which member borrowed which book along with borrow and return dates, w
 ### Logical Design
 
 **Author**
-- author_id (PK)
 - name
 - biography
+- author_id (PK)
 
 **Book**
-- book_id (PK)
 - title
-- publish_year
 - category
+- book_id (PK)
+- publish_year
 - author_id (FK)
 
 **Member**
-- member_id (PK)
 - name
 - contact_info
+- member_id (PK)
 
 **Borrowing**
-- borrowing_id (PK)
 - borrow_date
 - return_date
-- member_id (FK)
 - book_id (FK)
+- member_id (FK)
+- borrowing_id (PK)
 
 ### Physical Design
 The database was implemented using MySQL with appropriate data types (INT, VARCHAR, DATE).
